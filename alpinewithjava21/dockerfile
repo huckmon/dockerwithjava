@@ -2,6 +2,6 @@ FROM alpine:3.19
 
 RUN apk update
 
-RUN apk add --update-cache openjdk8-jre
+RUN apk add --update-cache openjdk21-jre
 
 RUN apk add --upadete-cahce nano
