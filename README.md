@@ -41,7 +41,7 @@ If you wish to use this for a game or application other than minecraft, you will
 
 In the case that you are running this for a minecraft modpack server, I recommend not running detached for the initial server launch as the initial launch takes much longer than subsequent launches.
 
-If you're having issues and your not awfully experience with docker-compose (like I was), please check out Docker's Compose file 3 reference documentation found [here](https://docs.docker.com/compose/compose-file/compose-file-v3/). This has 
+If you're having issues and your not awfully experience with docker-compose (like I was), please check out Docker's Compose file 3 reference documentation found here (https://docs.docker.com/compose/compose-file/compose-file-v3/). This documentation has helped me a lot when I was starting out.
 
 ## Running a command on container startup without exec'ing into the container
 
