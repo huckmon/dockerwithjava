@@ -4,4 +4,4 @@ RUN apk update
 
 RUN apk add --update-cache openjdk8-jre
 
-RUN apk add --upadete-cahce nano
+RUN apk add --upadete-cache nano
