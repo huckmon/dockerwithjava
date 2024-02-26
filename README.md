@@ -60,7 +60,7 @@ In the case you want your server to start when the container starts, add the fol
   command: bash /home/PathToModpackFolder/launch.sh
 ```
 
-# Versions
+# Versions/tags
 
 The names of these versions are the base image and the java version. They also double as the tag names.
 
@@ -70,17 +70,21 @@ Versions:
 - alpinewithjava8
 - alpinewithjava21
 
-If you're using this container for minecraft servers of anykind, Minecraft versions 1.12.2 and below need java 8 and any other versions are fine with java 17 and above.
+Please note that for alpine images you'll need to replace `bash` with `sh` anytime it's mentioned in this page (and in general use).
 
 # Running a minecraft modpack server
 
-This section is a quickstart guide to using this container for a minecraft modpack server. This also works as a very liberal example for running other apps with this container
+This section is a quickstart guide to using this container for a minecraft modpack server. This also works as a very liberal example for running other apps java with this container.
+
+please note that if you're using this container for minecraft servers of anykind, Minecraft versions 1.12.2 and below need java 8 and any other versions are fine with java 17 and above so you will need to ensure you're using the right container tag.
 
 Do `docker exec -it <container name> bash` to enter the container. For alpine images you'll need to replace `bash` with `sh` anytime it's mentioned.
 
 Navigate to the location of your modpack server files. If you followed the provided examples, it'll be in /home/modpackfiles with modpackfiles being the name you gave it.
 
 Do `bash launch.sh` where launch.sh is the name of the shell script to launch the server.
+
+Alternately, if you don't want to use a launch script, just do `java -server -Xms<Min_Ram> -Xmx<Max_Ram> <Javaargs> -jar <Modloader_Jar> nogui`. you'll need to replace; Min_Ram and Max_Ram with the minimum and maximum memory you want to give the server, Modloader_Jar with the modloader jar file and Javaargs can be removed if you don't have any java arguments you want to use. If you run into issues with java, just replace java with the direct path to your java version.
 
 ## Server launch script
 
