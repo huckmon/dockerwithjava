@@ -32,7 +32,7 @@ services:
     ports:
       - "25565:25565"
     volumes:
-      - ./modpackserverfolder:/home/modpackserverfolder
+      - ./serverdirectory:/serverdirectory #change this to be the path to your modpack server folder
     restart: unless-stopped
     stdin_open: true
     tty: true
@@ -45,7 +45,7 @@ Most of this section is for people newer to docker and need a hand with changing
 
 Attach the path to your modpack server folder to a location in the container so that files will persist.
 
-If you wish to change the port that the server uses in order to host multiple minecraft servers for example, change the `"25565:25565"` under `ports` to `"desiredport:25565"`. Now the server port will be located at the desired port number.
+If you wish to change the port that the server uses in order to host multiple minecraft servers for example, change the `"25565:25565"` under `ports` to `"desiredPort:25565"`. Now the server port will be located at the desired port number.
 
 The restart: unless-stopped section sets the container to relaunch in the case that it is closed by an error or otherwise not by the user. This can be removed if you don't want this behaviour.
 

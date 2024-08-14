@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+WORKDIR /home
+
 RUN apk update
 
 RUN apk add --update-cache openjdk8-jre
